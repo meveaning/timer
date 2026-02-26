@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "TimerApp-arm64-apple-macosx26.0-debug.exe": ["<TimerApp-arm64-apple-macosx26.0-debug.exe>"]
+  "TimerApp-arm64-apple-macosx26.0-debug.module": ["<TimerApp-arm64-apple-macosx26.0-debug.module>"]
+  "main": ["<TimerApp-arm64-apple-macosx26.0-debug.exe>","<TimerApp-arm64-apple-macosx26.0-debug.module>"]
+  "test": ["<TimerApp-arm64-apple-macosx26.0-debug.exe>","<TimerApp-arm64-apple-macosx26.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/wqz/Documents/work/tools/timer/Sources/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp":
+    is-mutated: true
+commands:
+  "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp-entitlement.plist"]
+    description: "Write auxiliary file /Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp-entitlement.plist"
+
+  "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift","/Users/wqz/Documents/work/tools/timer/Sources/ContentView.swift","/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift","/Users/wqz/Documents/work/tools/timer/Sources/main.swift"]
+    outputs: ["/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/sources"]
+    description: "Write auxiliary file /Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/sources"
+
+  "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/AppDelegate.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/ContentView.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/TimerModel.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/main.swift.o"]
+    outputs: ["/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.product/Objects.LinkFileList"
+
+  "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<TimerApp-arm64-apple-macosx26.0-debug.exe>":
+    tool: phony
+    inputs: ["<TimerApp-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    outputs: ["<TimerApp-arm64-apple-macosx26.0-debug.exe>"]
+
+  "<TimerApp-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/AppDelegate.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/ContentView.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/TimerModel.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/main.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/Modules/TimerApp.swiftmodule"]
+    outputs: ["<TimerApp-arm64-apple-macosx26.0-debug.module>"]
+
+  "C.TimerApp-arm64-apple-macosx26.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/AppDelegate.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/ContentView.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/TimerModel.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/main.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.product/Objects.LinkFileList"]
+    outputs: ["/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/TimerApp"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug","-o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp","-module-name","TimerApp","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_TimerApp_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx12.0","-Xlinker","-add_ast_path","-Xlinker","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/Modules/TimerApp.swiftmodule","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g"]
+
+  "C.TimerApp-arm64-apple-macosx26.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp-entitlement.plist"]
+    outputs: ["<TimerApp-arm64-apple-macosx26.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/TimerApp"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp-entitlement.plist","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp"]
+
+  "C.TimerApp-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift","/Users/wqz/Documents/work/tools/timer/Sources/ContentView.swift","/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift","/Users/wqz/Documents/work/tools/timer/Sources/main.swift","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/sources"]
+    outputs: ["/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/AppDelegate.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/ContentView.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/TimerModel.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/main.swift.o","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/Modules/TimerApp.swiftmodule"]
+    description: "Compiling Swift Module 'TimerApp' (4 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","TimerApp","-emit-dependencies","-emit-module","-emit-module-path","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/Modules/TimerApp.swiftmodule","-output-file-map","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/output-file-map.json","-incremental","-c","@/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/sources","-I","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx12.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","TimerApp_main","-color-diagnostics","-swift-version","5","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/wqz/Documents/work/tools/timer/Sources/","/Users/wqz/Documents/work/tools/timer/Package.swift","/Users/wqz/Documents/work/tools/timer/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

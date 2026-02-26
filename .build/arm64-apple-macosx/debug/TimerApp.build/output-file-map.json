@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/master.swiftdeps"
+  },
+  "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift": {
+    "dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/AppDelegate.d",
+    "object": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/AppDelegate.swiftdeps",
+    "diagnostics": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/AppDelegate.dia"
+  },
+  "/Users/wqz/Documents/work/tools/timer/Sources/ContentView.swift": {
+    "dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/ContentView.d",
+    "object": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/ContentView.swift.o",
+    "swiftmodule": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/ContentView.dia"
+  },
+  "/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift": {
+    "dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/TimerModel.d",
+    "object": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/TimerModel.swift.o",
+    "swiftmodule": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/TimerModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/TimerModel.swiftdeps",
+    "diagnostics": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/TimerModel.dia"
+  },
+  "/Users/wqz/Documents/work/tools/timer/Sources/main.swift": {
+    "dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/main.d",
+    "object": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/main.swift.o",
+    "swiftmodule": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/main.swiftdeps",
+    "diagnostics": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/debug/TimerApp.build/main.dia"
+  }
+}
