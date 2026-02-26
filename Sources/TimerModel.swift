@@ -1,13 +1,14 @@
 import Foundation
 import AVFoundation
-import UserNotifications
-import AudioToolbox
+import Combine
+import Cocoa
 
 class TimerModel: ObservableObject {
     @Published var timeRemaining: TimeInterval = 1800 // 默认30分钟
     @Published var isRunning = false
     @Published var isPaused = false
     @Published var totalTime: TimeInterval = 1800
+    @Published var selectedSoundURL: URL? = nil
     
     private var timer: Timer?
     private var audioPlayer: AVAudioPlayer?
@@ -19,6 +20,14 @@ class TimerModel: ObservableObject {
         2700,   // 45分钟
         3600    // 1小时
     ]
+    
+    // 默认音效文件（内置）
+    private let defaultSoundURL: URL? = {
+        if let soundURL = Bundle.main.url(forResource: "alarm", withExtension: "mp3") {
+            return soundURL
+        }
+        return nil
+    }()
     
     func startTimer() {
         if !isRunning {
@@ -69,38 +78,56 @@ class TimerModel: ObservableObject {
         isRunning = false
         isPaused = false
         
-        // 发送通知
-        sendNotification()
-        
-        // 播放声音
+        // 播放自定义音乐
         playAlertSound()
     }
     
-    private func sendNotification() {
-        // 请求通知权限
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { granted, error in
-            if granted {
+    func playAlertSound() {
+        // 停止当前播放的声音
+        audioPlayer?.stop()
+        
+        // 确定要播放的音效文件
+        let soundURL = selectedSoundURL ?? defaultSoundURL
+        
+        guard let url = soundURL else {
+            // 如果没有自定义音效，使用系统提示音
+            NSSound.beep()
+            return
+        }
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.volume = 0.8
+            audioPlayer?.numberOfLoops = 0 // 播放一次
+            audioPlayer?.play()
+        } catch {
+            print("播放音效失败: \(error)")
+            // 回退到系统提示音
+            NSSound.beep()
+        }
+    }
+    
+    func selectSoundFile() {
+        let openPanel = NSOpenPanel()
+        openPanel.title = "选择提醒音效"
+        openPanel.showsResizeIndicator = true
+        openPanel.showsHiddenFiles = false
+        openPanel.canChooseDirectories = false
+        openPanel.canCreateDirectories = false
+        openPanel.allowsMultipleSelection = false
+        openPanel.allowedFileTypes = ["mp3", "wav", "aiff", "m4a"]
+        
+        openPanel.begin { response in
+            if response == .OK, let url = openPanel.url {
                 DispatchQueue.main.async {
-                    let content = UNMutableNotificationContent()
-                    content.title = "定时器提醒"
-                    content.body = "定时时间已到！"
-                    content.sound = UNNotificationSound.default
-                    
-                    let request = UNNotificationRequest(identifier: "timerNotification", content: content, trigger: nil)
-                    
-                    UNUserNotificationCenter.current().add(request) { error in
-                        if let error = error {
-                            print("通知发送失败: \(error)")
-                        }
-                    }
+                    self.selectedSoundURL = url
                 }
             }
         }
     }
     
-    private func playAlertSound() {
-        // 使用系统默认提示音
-        AudioServicesPlaySystemSound(1005) // 系统提示音
+    func resetSoundSelection() {
+        selectedSoundURL = nil
     }
     
     // 格式化时间显示

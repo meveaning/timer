@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var timerModel = TimerModel()
+    @ObservedObject var timerModel: TimerModel
     @State private var customMinutes: String = "30"
     @State private var showCustomInput = false
     
@@ -77,6 +77,48 @@ struct ContentView: View {
                 }
                 .padding(.top, 8)
             }
+            
+            // 音效设置
+            VStack(spacing: 12) {
+                Text("提醒音效")
+                    .font(.headline)
+                    .foregroundColor(.secondary)
+                
+                HStack(spacing: 12) {
+                    Button(action: timerModel.selectSoundFile) {
+                        HStack {
+                            Image(systemName: "music.note")
+                            Text("选择音效")
+                        }
+                        .foregroundColor(.blue)
+                    }
+                    .buttonStyle(.plain)
+                    
+                    if timerModel.selectedSoundURL != nil {
+                        Button(action: timerModel.resetSoundSelection) {
+                            HStack {
+                                Image(systemName: "xmark.circle")
+                                Text("重置")
+                            }
+                            .foregroundColor(.red)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                
+                if let soundURL = timerModel.selectedSoundURL {
+                    Text("已选择: \(soundURL.lastPathComponent)")
+                        .font(.caption)
+                        .foregroundColor(.green)
+                        .lineLimit(1)
+                        .truncationMode(.middle)
+                } else {
+                    Text("使用默认音效")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+            }
+            .padding(.vertical, 10)
             
             Spacer()
             
@@ -174,6 +216,6 @@ struct ControlButton: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(timerModel: TimerModel())
     }
 }

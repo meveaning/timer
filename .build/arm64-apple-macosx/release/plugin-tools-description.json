@@ -1,0 +1,272 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.TimerApp-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/sources",
+      "importPath" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "TimerApp",
+      "moduleOutputPath" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/Modules/TimerApp.swiftmodule",
+      "objects" : [
+        "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate.swift.o",
+        "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/ContentView.swift.o",
+        "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/TimerModel.swift.o",
+        "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "TimerApp_main",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g"
+      ],
+      "outputFileMapPath" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/TimerModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/Modules/TimerApp.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift",
+        "/Users/wqz/Documents/work/tools/timer/Sources/ContentView.swift",
+        "/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift",
+        "/Users/wqz/Documents/work/tools/timer/Sources/main.swift"
+      ],
+      "tempsPath" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "TimerApp" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "TimerApp",
+      "-c",
+      "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift",
+      "/Users/wqz/Documents/work/tools/timer/Sources/ContentView.swift",
+      "/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift",
+      "/Users/wqz/Documents/work/tools/timer/Sources/main.swift",
+      "-I",
+      "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "TimerApp_main",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "TimerApp" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/sources"
+    },
+    "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/TimerModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.product/Objects.LinkFileList"
+    },
+    "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}
