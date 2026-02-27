@@ -24,8 +24,8 @@
     <string>Copyright © 2024 TimerApp. All rights reserved.</string>
     <key>NSPrincipalClass</key>
     <string>NSApplication</string>
-    <key>LSUIElement</key>
-    <true/>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon.icns</string>
     <key>NSHighResolutionCapable</key>
     <true/>
 </dict>

@@ -4,6 +4,12 @@
     "object": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/TimerApp.o",
     "swift-dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/master.swiftdeps"
   },
+  "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate-old.swift": {
+    "object": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate-old.swift.o",
+    "swiftmodule": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate-old~partial.swiftmodule",
+    "swift-dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate-old.swiftdeps",
+    "diagnostics": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate-old.dia"
+  },
   "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift": {
     "object": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate.swift.o",
     "swiftmodule": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate~partial.swiftmodule",
@@ -21,11 +27,5 @@
     "swiftmodule": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/TimerModel~partial.swiftmodule",
     "swift-dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/TimerModel.swiftdeps",
     "diagnostics": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/TimerModel.dia"
-  },
-  "/Users/wqz/Documents/work/tools/timer/Sources/main.swift": {
-    "object": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/main.swift.o",
-    "swiftmodule": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/main~partial.swiftmodule",
-    "swift-dependencies": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/main.swiftdeps",
-    "diagnostics": "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/main.dia"
   }
 }

@@ -24,6 +24,10 @@
       "inputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate-old.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift"
         },
         {
@@ -33,10 +37,6 @@
         {
           "kind" : "file",
           "name" : "/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/main.swift"
         },
         {
           "kind" : "file",
@@ -51,10 +51,10 @@
       "moduleName" : "TimerApp",
       "moduleOutputPath" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/Modules/TimerApp.swiftmodule",
       "objects" : [
+        "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate-old.swift.o",
         "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate.swift.o",
         "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/ContentView.swift.o",
-        "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/TimerModel.swift.o",
-        "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/main.swift.o"
+        "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/TimerModel.swift.o"
       ],
       "otherArguments" : [
         "-target",
@@ -74,7 +74,6 @@
         "-entry-point-function-name",
         "-Xfrontend",
         "TimerApp_main",
-        "-color-diagnostics",
         "-swift-version",
         "5",
         "-I",
@@ -99,6 +98,10 @@
       "outputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate-old.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate.swift.o"
         },
         {
@@ -111,19 +114,15 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/main.swift.o"
-        },
-        {
-          "kind" : "file",
           "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/Modules/TimerApp.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
+        "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate-old.swift",
         "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift",
         "/Users/wqz/Documents/work/tools/timer/Sources/ContentView.swift",
-        "/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift",
-        "/Users/wqz/Documents/work/tools/timer/Sources/main.swift"
+        "/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift"
       ],
       "tempsPath" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build",
       "wholeModuleOptimization" : true
@@ -138,10 +137,10 @@
       "-module-name",
       "TimerApp",
       "-c",
+      "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate-old.swift",
       "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift",
       "/Users/wqz/Documents/work/tools/timer/Sources/ContentView.swift",
       "/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift",
-      "/Users/wqz/Documents/work/tools/timer/Sources/main.swift",
       "-I",
       "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/Modules",
       "-target",
@@ -161,7 +160,6 @@
       "-entry-point-function-name",
       "-Xfrontend",
       "TimerApp_main",
-      "-color-diagnostics",
       "-swift-version",
       "5",
       "-I",
@@ -211,6 +209,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate-old.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wqz/Documents/work/tools/timer/Sources/AppDelegate.swift"
         },
         {
@@ -220,10 +222,6 @@
         {
           "kind" : "file",
           "name" : "/Users/wqz/Documents/work/tools/timer/Sources/TimerModel.swift"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/wqz/Documents/work/tools/timer/Sources/main.swift"
         }
       ],
       "outputFilePath" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/sources"
@@ -237,6 +235,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate-old.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/AppDelegate.swift.o"
         },
         {
@@ -246,10 +248,6 @@
         {
           "kind" : "file",
           "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/TimerModel.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.build/main.swift.o"
         }
       ],
       "outputFilePath" : "/Users/wqz/Documents/work/tools/timer/.build/arm64-apple-macosx/release/TimerApp.product/Objects.LinkFileList"

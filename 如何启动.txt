@@ -1,0 +1,71 @@
+# TimerApp 启动指南 - 最简单的方法
+
+## 🖱️ 双击什么？
+你需要双击这个文件：
+```
+TimerApp.app
+```
+它看起来像这样：⏰
+
+## 📍 在哪里找？
+在 Finder 中打开这个文件夹：
+```
+/Users/wqz/Documents/work/tools/timer/
+```
+你会看到：
+- ⏰ TimerApp.app  (这是应用，双击它)
+- 📄 其他文件 (不要双击这些)
+
+## 🚀 最简单的启动方法
+
+### 方法1：直接双击（推荐）
+1. 打开 Finder (访达)
+2. 进入文件夹：/Users/wqz/Documents/work/tools/timer/
+3. 找到并双击：⏰ **TimerApp.app**
+
+### 方法2：使用终端（如果方法1不行）
+打开终端，运行：
+```bash
+cd "/Users/wqz/Documents/work/tools/timer"
+open TimerApp.app
+```
+
+### 方法3：右键点击打开（如果macOS阻止）
+1. 在 Finder 中找到 TimerApp.app
+2. 按住 Control 键并点击（或右键点击）
+3. 选择"打开"
+4. 在安全提示中点击"打开"
+
+## ⚠️ 重要提示
+
+### 这是菜单栏应用
+- ✅ 启动后会在**屏幕右上角菜单栏**显示 ⏰ 图标
+- ❌ **不会**出现在 Dock 中
+- ❌ **不会**弹出主窗口
+
+### 如何确认应用已启动？
+1. 启动应用
+2. 看屏幕右上角菜单栏
+3. 找到 ⏰ 图标（可能需要滚动）
+4. 点击 ⏰ 图标打开控制面板
+
+### 如何退出应用？
+1. 点击菜单栏 ⏰ 图标
+2. 选择"退出"
+
+## 🔧 如果双击没反应
+运行这个修复脚本：
+```bash
+cd "/Users/wqz/Documents/work/tools/timer"
+chmod +x fix-and-launch.sh
+./fix-and-launch.sh
+```
+
+## 📞 需要帮助？
+如果还有问题，请说明：
+1. 双击后看到什么提示？
+2. 菜单栏有没有出现 ⏰ 图标？
+3. 有没有错误信息？
+
+---
+**现在就去试试：双击 TimerApp.app！**
